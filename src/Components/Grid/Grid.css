@@ -1,0 +1,235 @@
+.grid table {
+  height: auto;
+  width: auto;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  min-width: 25px;
+  min-height: 25px;
+  width: 25px;
+  height: 25px;
+  border: solid 1px;
+  margin: 0px;
+}
+
+.wall {
+  -webkit-animation: makeWall 0.5s ease-out forwards;
+          animation: makeWall 0.5s ease-out forwards;
+}
+
+.visited {
+  -webkit-animation: visit 1s ease-out forwards;
+          animation: visit 1s ease-out forwards;
+}
+
+.shortest-path {
+  -webkit-animation: shortestPathAnimation 0.5s ease-out forwards;
+          animation: shortestPathAnimation 0.5s ease-out forwards;
+}
+
+@-webkit-keyframes shortestPathAnimation {
+  0% {
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+    background-color: #fdd854;
+  }
+  75% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    background-color: white;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    background-color: #fdd854;
+  }
+}
+
+@keyframes shortestPathAnimation {
+  0% {
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+    background-color: #fdd854;
+  }
+  75% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    background-color: white;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    background-color: #fdd854;
+  }
+}
+
+.buttons {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: fixed;
+  top: 0px;
+  height: 10vh;
+}
+
+.grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 6vh;
+}
+
+table {
+  margin: auto;
+}
+
+.start-icon,
+.finish-icon {
+  width: 23px;
+  height: 23px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
+  -webkit-animation: iconAnimation 0.5s ease-out forwards;
+          animation: iconAnimation 0.5s ease-out forwards;
+}
+
+@media screen and (max-width: 800px) {
+  td {
+    min-width: 15px;
+    min-height: 15px;
+    width: 15px;
+    height: 15px;
+  }
+  .start-icon,
+  .finish-icon {
+    width: 13px;
+    height: 13px;
+  }
+}
+
+@-webkit-keyframes iconAnimation {
+  0% {
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes iconAnimation {
+  0% {
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes makeWall {
+  0% {
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+    background-color: #0a1608;
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    background-color: #0a1608;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    background-color: #0a1608;
+  }
+}
+
+@keyframes makeWall {
+  0% {
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+    background-color: #0a1608;
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    background-color: #0a1608;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    background-color: #0a1608;
+  }
+}
+
+@-webkit-keyframes visit {
+  0% {
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+    background-color: #819767;
+    border-radius: 100%;
+  }
+  50% {
+    background-color: #334426;
+  }
+  75% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    background-color: #738a59;
+  }
+}
+
+@keyframes visit {
+  0% {
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+    background-color: #819767;
+    border-radius: 100%;
+  }
+  50% {
+    background-color: #334426;
+  }
+  75% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    background-color: #738a59;
+  }
+}
+/*# sourceMappingURL=Grid.css.map */

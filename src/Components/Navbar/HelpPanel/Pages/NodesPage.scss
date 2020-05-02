@@ -1,0 +1,70 @@
+.nodes-page {
+   display: grid;
+   grid-template-areas:
+      "title title title"
+      "node-1 desc-1 ."
+      "node-2 desc-2 ."
+      "node-3 desc-3 ."
+      "node-4 desc-4 ."
+      "node-5 desc-5 ."
+      ". . .";
+   grid-template-rows: 2fr 2fr 2fr 2fr 2fr 2fr 1fr;
+   grid-template-columns: 2fr 6fr 1fr;
+   grid-gap: 0;
+
+   justify-items: center;
+   align-items: center;
+   height: 100%;
+   width: 100%;
+   .unvisited,
+   .visited,
+   .wall,
+   .shortest-path {
+      border: 1px solid;
+      width: 25px;
+      height: 25px;
+   }
+
+   .unvisited {
+      grid-area: node-1;
+   }
+   .visited {
+      grid-area: node-2;
+   }
+   .wall {
+      grid-area: node-4;
+   }
+   .shortest-path {
+      grid-area: node-3;
+   }
+   .start-and-finish {
+      grid-area: node-5;
+   }
+   .desc-0 {
+      grid-area: desc-1;
+   }
+   .desc-1 {
+      grid-area: desc-2;
+   }
+   .desc-2 {
+      grid-area: desc-3;
+   }
+   .desc-3 {
+      grid-area: desc-4;
+   }
+   .desc-4 {
+      grid-area: desc-5;
+   }
+
+   .nodes-page-title {
+      grid-area: title;
+      display: flex;
+      justify-content: center;
+      letter-spacing: 0;
+      font-size: 30px;
+   }
+   h5 {
+      font-weight: normal;
+      font-size: 18px;
+   }
+}

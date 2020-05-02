@@ -1,0 +1,149 @@
+$blue: #0c4767;
+$green: #738a59;
+$red: #c1292e;
+$yellow: #fdd854;
+$orange: #eb9951;
+
+nav {
+   background-color: #0c4767;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 60px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   h2 {
+      color: white;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+   }
+}
+
+.other-buttons {
+   button {
+      font-size: 13px;
+      padding: 8px;
+      letter-spacing: 0.5px;
+   }
+}
+
+.center-button {
+   button {
+      padding-left: 15px;
+      padding-right: 15px;
+   }
+}
+
+.title,
+.center-button,
+.other-buttons {
+   width: 33.3vw;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+
+button {
+   border: none;
+   padding: 10px;
+   text-decoration: none;
+   border-radius: 3px;
+   font-size: 15px;
+   font-family: sans-serif;
+   font-weight: bold;
+   letter-spacing: 1px;
+}
+
+.visualize-button,
+.reset-button,
+.help-button {
+   border: 3px solid;
+   background: none;
+   transition: 0.2s ease-out;
+   color: white;
+}
+
+.reset-button:hover {
+   background-color: $red;
+   color: black;
+   cursor: pointer;
+}
+
+.visualize-button:hover {
+   background-color: $yellow;
+   color: black;
+   cursor: pointer;
+}
+
+.help-button:hover {
+   background-color: $orange;
+   color: black;
+   cursor: pointer;
+}
+
+.visualize-button {
+   border-color: $yellow;
+}
+
+.reset-button {
+   border-color: $red;
+}
+
+.help-button {
+   border-color: $orange;
+}
+
+.reset-button:active,
+.visualize-button:active,
+.help-button:active {
+   transform: scale(1.05);
+}
+
+@media screen and (max-width: 1000px) {
+   nav {
+      height: 120px;
+      width: 100vw;
+      display: grid;
+      grid-template-areas:
+         "title title"
+         "buttons buttons";
+      grid-template-columns: 2fr 3fr;
+
+      .title {
+         width: 100%;
+         grid-area: title;
+      }
+      .center-button,
+      .other-buttons {
+         width: 100%;
+         align-self: center;
+      }
+   }
+}
+
+@media screen and (max-width: 600px) {
+   nav {
+      height: 120px;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      .title {
+         width: 100%;
+      }
+      h2 {
+         font-size: 18px;
+      }
+      button {
+         transform: scale(0.85);
+      }
+
+      .center-button,
+      .other-buttons {
+         width: 100%;
+         align-self: center;
+      }
+   }
+}

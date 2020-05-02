@@ -1,0 +1,164 @@
+nav {
+  background-color: #0c4767;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav h2 {
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.other-buttons button {
+  font-size: 13px;
+  padding: 8px;
+  letter-spacing: 0.5px;
+}
+
+.center-button button {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.title,
+.center-button,
+.other-buttons {
+  width: 33.3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+button {
+  border: none;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 3px;
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.visualize-button,
+.reset-button,
+.help-button {
+  border: 3px solid;
+  background: none;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+  color: white;
+}
+
+.reset-button:hover {
+  background-color: #c1292e;
+  color: black;
+  cursor: pointer;
+}
+
+.visualize-button:hover {
+  background-color: #fdd854;
+  color: black;
+  cursor: pointer;
+}
+
+.help-button:hover {
+  background-color: #eb9951;
+  color: black;
+  cursor: pointer;
+}
+
+.visualize-button {
+  border-color: #fdd854;
+}
+
+.reset-button {
+  border-color: #c1292e;
+}
+
+.help-button {
+  border-color: #eb9951;
+}
+
+.reset-button:active,
+.visualize-button:active,
+.help-button:active {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+@media screen and (max-width: 1000px) {
+  nav {
+    height: 120px;
+    width: 100vw;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "title title" "buttons buttons";
+    -ms-grid-columns: 2fr 3fr;
+        grid-template-columns: 2fr 3fr;
+  }
+  nav .title {
+    width: 100%;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: title;
+  }
+  nav .center-button,
+  nav .other-buttons {
+    width: 100%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    height: 120px;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  nav .title {
+    width: 100%;
+  }
+  nav h2 {
+    font-size: 18px;
+  }
+  nav button {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  nav .center-button,
+  nav .other-buttons {
+    width: 100%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+/*# sourceMappingURL=Navbar.css.map */

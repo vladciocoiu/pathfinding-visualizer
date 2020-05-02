@@ -1,0 +1,143 @@
+$blue: #0c4767;
+$green: #738a59;
+$red: #c1292e;
+$yellow: #fdd854;
+$orange: #eb9951;
+
+$green-2: #334426;
+$green-3: #819767;
+
+.grid {
+   table {
+      height: auto;
+      width: auto;
+   }
+}
+
+table {
+   border-collapse: collapse;
+}
+
+td {
+   min-width: 25px;
+   min-height: 25px;
+   width: 25px;
+   height: 25px;
+   border: solid 1px;
+   margin: 0px;
+}
+
+.wall {
+   animation: makeWall 0.5s ease-out forwards;
+}
+.visited {
+   animation: visit 1s ease-out forwards;
+}
+.shortest-path {
+   animation: shortestPathAnimation 0.5s ease-out forwards;
+}
+
+@keyframes shortestPathAnimation {
+   0% {
+      transform: scale(0.3);
+      background-color: $yellow;
+   }
+   75% {
+      transform: scale(1.2);
+      background-color: white;
+   }
+   100% {
+      transform: scale(1);
+      background-color: $yellow;
+   }
+}
+
+.buttons {
+   width: 100vw;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   position: fixed;
+   top: 0px;
+   height: 10vh;
+}
+
+.grid {
+   display: flex;
+   justify-content: center;
+   margin-top: 6vh;
+}
+
+table {
+   margin: auto;
+}
+
+.start-icon,
+.finish-icon {
+   width: 23px;
+   height: 23px;
+   margin: auto;
+   display: flex;
+   align-self: center;
+   justify-self: center;
+   animation: iconAnimation 0.5s ease-out forwards;
+}
+
+@media screen and (max-width: 800px) {
+   td {
+      min-width: 15px;
+      min-height: 15px;
+      width: 15px;
+      height: 15px;
+   }
+   .start-icon,
+   .finish-icon {
+      width: 13px;
+      height: 13px;
+   }
+}
+
+@keyframes iconAnimation {
+   0% {
+      transform: scale(0.3);
+   }
+   50% {
+      transform: scale(1.2);
+   }
+   100% {
+      transform: scale(1);
+   }
+}
+
+@keyframes makeWall {
+   0% {
+      transform: scale(0.3);
+      background-color: #0a1608;
+   }
+   50% {
+      transform: scale(1.2);
+      background-color: #0a1608;
+   }
+   100% {
+      transform: scale(1);
+      background-color: #0a1608;
+   }
+}
+
+@keyframes visit {
+   0% {
+      transform: scale(0.3);
+      background-color: $green-3;
+      border-radius: 100%;
+   }
+   50% {
+      background-color: $green-2;
+   }
+   75% {
+      transform: scale(1.2);
+   }
+   100% {
+      transform: scale(1);
+      background-color: $green;
+   }
+}

@@ -1,0 +1,119 @@
+$blue: #0c4767;
+$green: #738a59;
+$red: #c1292e;
+$yellow: #fdd854;
+$orange: #eb9951;
+
+.algorithms-page {
+   display: grid;
+   grid-template-areas:
+      ". title title ."
+      ". alg-1 desc-1 ."
+      ". alg-2 desc-2 ."
+      ". alg-3 desc-3 ."
+      ". alg-4 desc-4 ."
+      ". . . .";
+   grid-template-rows: 2.5fr 3fr 3fr 3fr 3fr 1fr;
+   grid-template-columns: 1fr 2fr 8fr 1fr;
+   grid-gap: 0;
+
+   justify-items: center;
+   align-items: center;
+   height: 100%;
+   width: 100%;
+   .alg-0 {
+      grid-area: alg-1;
+   }
+   .alg-1 {
+      grid-area: alg-2;
+   }
+   .alg-2 {
+      grid-area: alg-3;
+   }
+   .alg-3 {
+      grid-area: alg-4;
+   }
+   .desc-0 {
+      grid-area: desc-1;
+   }
+   .desc-1 {
+      grid-area: desc-2;
+   }
+   .desc-2 {
+      grid-area: desc-3;
+   }
+   .desc-3 {
+      grid-area: desc-4;
+   }
+
+   .algorithms-page-title {
+      grid-area: title;
+      display: flex;
+      justify-content: center;
+      letter-spacing: 0;
+      font-size: 30px;
+   }
+   text-align: center;
+   h5 {
+      font-weight: normal;
+      font-size: 16px;
+   }
+   a {
+      text-decoration: none;
+      font-size: 18px;
+      color: black;
+      transition: 0.3s;
+      font-weight: bold;
+      border: 2px solid;
+      padding: 10px;
+   }
+   a:hover {
+      transform: scale(1.1);
+      color: white;
+      border-radius: 10px;
+   }
+   .alg-0 {
+      border-color: $green;
+   }
+   .alg-1 {
+      border-color: $red;
+   }
+   .alg-2 {
+      border-color: $blue;
+   }
+   .alg-3 {
+      border-color: $orange;
+   }
+   .alg-0:hover {
+      background-color: $green;
+   }
+   .alg-1:hover {
+      background-color: $red;
+   }
+   .alg-2:hover {
+      background-color: $blue;
+   }
+   .alg-3:hover {
+      background-color: $orange;
+   }
+}
+
+@media screen and (max-width: 600px) {
+   .algorithms-page {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      h5 {
+         font-size: 15px;
+      }
+   }
+
+   .algorithms-page-title {
+      margin-top: 50px;
+      margin-bottom: 50px;
+   }
+   a {
+      transform: scale(0.8);
+   }
+}

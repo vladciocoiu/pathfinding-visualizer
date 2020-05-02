@@ -1,0 +1,174 @@
+.help {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.help-hide {
+  display: none;
+}
+
+.help-show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.help-buttons {
+  width: 50vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 1;
+}
+
+.help-content {
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50vw;
+  height: 80vh;
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.help-content h2 {
+  color: black;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.help-page-button {
+  width: auto;
+  height: 40px;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+  top: 8px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  padding: 5px;
+}
+
+.x {
+  height: 30px;
+  position: relative;
+  bottom: 3px;
+}
+
+.tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tabs div {
+  margin-right: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.active {
+  background-color: white;
+}
+
+.active:hover {
+  cursor: default;
+}
+
+.inactive {
+  background-color: #cecece;
+}
+
+.inactive:hover {
+  background-color: #e7e7e7;
+  cursor: pointer;
+}
+
+h4 {
+  font-weight: normal;
+}
+
+.exit-button:hover {
+  -webkit-transform: translateX(-0.13em) scale(1.1);
+          transform: translateX(-0.13em) scale(1.1);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1350px) {
+  .help-content,
+  .help-buttons {
+    width: 75vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .help-content {
+    width: 100vw;
+    height: 90vh;
+  }
+  .help-buttons {
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .help-buttons {
+    position: absolute;
+    top: 0;
+  }
+  .help-content {
+    height: 150vh;
+    position: absolute;
+    top: 40px;
+  }
+}
+/*# sourceMappingURL=HelpPanel.css.map */

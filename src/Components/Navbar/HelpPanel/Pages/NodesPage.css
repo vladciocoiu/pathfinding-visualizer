@@ -1,0 +1,106 @@
+.nodes-page {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "title title title" "node-1 desc-1 ." "node-2 desc-2 ." "node-3 desc-3 ." "node-4 desc-4 ." "node-5 desc-5 ." ". . .";
+  -ms-grid-rows: 2fr 2fr 2fr 2fr 2fr 2fr 1fr;
+      grid-template-rows: 2fr 2fr 2fr 2fr 2fr 2fr 1fr;
+  -ms-grid-columns: 2fr 6fr 1fr;
+      grid-template-columns: 2fr 6fr 1fr;
+  grid-gap: 0;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.nodes-page .unvisited,
+.nodes-page .visited,
+.nodes-page .wall,
+.nodes-page .shortest-path {
+  border: 1px solid;
+  width: 25px;
+  height: 25px;
+}
+
+.nodes-page .unvisited {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: node-1;
+}
+
+.nodes-page .visited {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: node-2;
+}
+
+.nodes-page .wall {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: node-4;
+}
+
+.nodes-page .shortest-path {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: node-3;
+}
+
+.nodes-page .start-and-finish {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: node-5;
+}
+
+.nodes-page .desc-0 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: desc-1;
+}
+
+.nodes-page .desc-1 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: desc-2;
+}
+
+.nodes-page .desc-2 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: desc-3;
+}
+
+.nodes-page .desc-3 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: desc-4;
+}
+
+.nodes-page .desc-4 {
+  -ms-grid-row: 6;
+  -ms-grid-column: 2;
+  grid-area: desc-5;
+}
+
+.nodes-page .nodes-page-title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: title;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 0;
+  font-size: 30px;
+}
+
+.nodes-page h5 {
+  font-weight: normal;
+  font-size: 18px;
+}
+/*# sourceMappingURL=NodesPage.css.map */
