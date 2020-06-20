@@ -112,8 +112,8 @@ button {
     display: -ms-grid;
     display: grid;
         grid-template-areas: "title title" "buttons buttons";
-    -ms-grid-columns: 2fr 3fr;
-        grid-template-columns: 2fr 3fr;
+    -ms-grid-columns: 2fr 5fr;
+        grid-template-columns: 2fr 5fr;
   }
   nav .title {
     width: 100%;
@@ -129,11 +129,16 @@ button {
         -ms-grid-row-align: center;
         align-self: center;
   }
+  nav .center-button button,
+  nav .other-buttons button {
+    font-size: 15px;
+    padding: 10px;
+  }
 }
 
 @media screen and (max-width: 600px) {
   nav {
-    height: 120px;
+    height: 25vh;
     width: 100vw;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -145,6 +150,7 @@ button {
   }
   nav .title {
     width: 100%;
+    height: 40%;
   }
   nav h2 {
     font-size: 18px;

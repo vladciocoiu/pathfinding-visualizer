@@ -38,7 +38,7 @@ export default function AlgorithmsPage() {
       <div className="algorithms-page">
          <h2 className="algorithms-page-title">Algorithms</h2>
          {algs.map((alg, index) => (
-            <>
+            <React.Fragment key={index}>
                <a
                   href={alg.article}
                   className={"alg-" + index}
@@ -48,7 +48,7 @@ export default function AlgorithmsPage() {
                   {alg.name}
                </a>
                <h5 className={"desc-" + index}>{alg.description}</h5>
-            </>
+            </React.Fragment>
          ))}
       </div>
    );

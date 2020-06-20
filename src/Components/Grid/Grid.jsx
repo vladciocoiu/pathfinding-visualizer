@@ -26,7 +26,6 @@ export default function Grid() {
 
    const [startIsBeingMoved, setStartIsBeingMoved] = useState(false);
    const [finishIsBeingMoved, setFinishIsBeingMoved] = useState(false);
-   console.log(startRow, finishRow);
 
    const resetPath = () => {
       const newNodes = makeInitialGrid();

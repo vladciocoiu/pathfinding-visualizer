@@ -153,10 +153,23 @@ h4 {
 @media screen and (max-width: 1000px) {
   .help-content {
     width: 100vw;
-    height: 90vh;
+    height: auto;
+    position: absolute;
+    top: 40px;
   }
   .help-buttons {
     width: 100vw;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+  }
+  .help-page-button {
+    border-radius: 5px;
+  }
+  .tabs button {
+    position: absolute;
+    top: 0px;
   }
 }
 

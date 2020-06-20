@@ -4,7 +4,7 @@ import "./StartPage.css";
 export default function StartPage() {
    const text = [
       "Here you can visualize some pathfinding algorithms, " +
-         "using the grid as a graph and its cells as nodes. " +
+         "using a grid. " +
          "This app is pretty simple and intuitive (I hope) to use. There are 3 steps:",
       "1. Pick an algorithm",
       "2. Create walls and/or move the start and finish nodes",
