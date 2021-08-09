@@ -4,6 +4,4 @@ This is an app that lets the users visualize how some patfinding algorithms (suc
 
 ## Usage
 
-You can try it out [here](https://ciorap88.github.io/pathfindinh-visualizer).
-
-
+You can try it out [here](https://ciorap88.github.io/pathfinding-visualizer).
