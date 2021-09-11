@@ -3,7 +3,7 @@ import "./NodesPage.css";
 
 export default function NodesPage() {
    const desc = [
-      "An unvisited node. The algorithm never considered that node for its path.",
+      "An unvisited node. The algorithm never considered it for its path.",
       "A visited node. The algorithm checked it, but it wasn't good enough to be a part of the path.",
       "A path node. The algorithm chose this as one of the nodes that represent the path.",
       "A wall. The path cannot go through it and the algorithm ignores it. You can turn nodes into walls / remove walls by clicking on them.",
