@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Node(props) {
    const {
@@ -11,6 +11,8 @@ export default function Node(props) {
       isFinish,
       isWall,
    } = props;
+
+   const [canChange, setCanChange] = useState(true);
 
    const getClassName = () => {
       if (isStart) return "start";
@@ -40,8 +42,8 @@ export default function Node(props) {
          id={row + "," + col}
          className={getClassName()}
          onMouseDown={() => handleMouseDown(row, col)}
-         onMouseUp={() => handleMouseUp()}
-         onMouseOver={() => handleMouseOver(row, col)}
+         onMouseUp={handleMouseUp}
+         onMouseOver={() => handleMouseOver(row, col, canChange, setCanChange)}
       >
          {getIcon()}
       </td>

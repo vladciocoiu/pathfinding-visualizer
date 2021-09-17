@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Grid.css";
 import Navbar from "../Navbar/Navbar.jsx";
 import Dijkstra from "../../Algorithms/Dijkstra";
@@ -26,6 +26,15 @@ export default function Grid() {
 
    const [startIsBeingMoved, setStartIsBeingMoved] = useState(false);
    const [finishIsBeingMoved, setFinishIsBeingMoved] = useState(false);
+
+   useEffect(() => {
+      document.body.addEventListener("mousedown", () => {
+         if (!buttonsLocked) setMouseIsPressed(true);
+      });
+      document.body.addEventListener("mouseup", () => {
+         setMouseIsPressed(false);
+      });
+   }, []);
 
    const resetPath = () => {
       const newNodes = makeInitialGrid();
@@ -66,7 +75,6 @@ export default function Grid() {
 
    const handleMouseDown = (row, col) => {
       if (buttonsLocked) return;
-      setMouseIsPressed(true);
 
       if (startRow === row && startCol === col) {
          setStartIsBeingMoved(true);
@@ -79,13 +87,16 @@ export default function Grid() {
    };
 
    const handleMouseUp = () => {
-      setMouseIsPressed(false);
       setStartIsBeingMoved(false);
       setFinishIsBeingMoved(false);
    };
 
-   const handleMouseOver = (row, col) => {
-      if (!mouseIsPressed || buttonsLocked) return;
+   const handleMouseOver = (row, col, canChange, setCanChange) => {
+      if (!mouseIsPressed || buttonsLocked || !canChange) return;
+      setCanChange(false);
+      setTimeout(() => {
+         setCanChange(true);
+      }, 500);
       if (startIsBeingMoved) {
          resetPath();
          const newGrid = moveStart(nodes, row, col);
@@ -155,22 +166,13 @@ export default function Grid() {
                      return (
                         <tr id={"row-" + rowIndex} key={rowIndex}>
                            {currentRow.map((node) => {
-                              const {
-                                 row,
-                                 col,
-                                 isStart,
-                                 isFinish,
-                                 isWall,
-                              } = node;
+                              const { row, col, isStart, isFinish, isWall } =
+                                 node;
                               return (
                                  <Node
-                                    handleMouseDown={(row, col) =>
-                                       handleMouseDown(row, col)
-                                    }
-                                    handleMouseUp={() => handleMouseUp()}
-                                    handleMouseOver={(row, col) =>
-                                       handleMouseOver(row, col)
-                                    }
+                                    handleMouseDown={handleMouseDown}
+                                    handleMouseUp={handleMouseUp}
+                                    handleMouseOver={handleMouseOver}
                                     row={row}
                                     col={col}
                                     isStart={isStart}
